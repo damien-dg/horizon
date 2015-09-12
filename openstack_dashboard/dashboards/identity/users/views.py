@@ -43,7 +43,7 @@ from openstack_dashboard.dashboards.identity.users \
 class IndexView(tables.DataTableView):
     table_class = project_tables.UsersTable
     template_name = 'identity/users/index.html'
-    page_title = _("Users")
+    page_title = _("GENEVIEVEVEVEVEVE")
 
     def get_data(self):
         users = []
