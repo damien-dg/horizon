@@ -242,7 +242,7 @@ class UsersTable(tables.DataTable):
 
     class Meta(object):
         name = "users"
-        verbose_name = _("Users")
+        verbose_name = _("GENEVIEVEVE")
         row_actions = (EditUserLink, ChangePasswordLink, ToggleEnabled,
                        DeleteUsersAction)
         table_actions = (UserFilterAction, CreateUserLink, DeleteUsersAction)
