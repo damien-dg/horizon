@@ -23,7 +23,6 @@ from openstack_dashboard.test.integration_tests.pages.project.compute import \
 class LoginPage(pageobject.PageObject):
     _login_username_field_locator = (by.By.ID, 'id_username')
     _login_password_field_locator = (by.By.ID, 'id_password')
-    _login_extra_password_field_locator = (by.By.ID, 'id_extra_password')
     _login_submit_button_locator = (by.By.CSS_SELECTOR,
                                     'div.modal-footer button.btn')
     _login_logout_reason_locator = (by.By.ID, 'logout_reason')
@@ -43,10 +42,6 @@ class LoginPage(pageobject.PageObject):
     @property
     def password(self):
         return self._get_element(*self._login_password_field_locator)
-
-    @property
-    def extra_password(self):
-        return self._get_element(*self._login_extra_password_field_locator)
 
     @property
     def login_button(self):
