@@ -26,6 +26,9 @@
      */
     .controller('hzLoginCtrl', function($scope) {
       $scope.auth_type = 'credentials';
+      $scope.alertNothing = function(){
+        window.alert('nothing');
+      };
     })
 
     /**
