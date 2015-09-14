@@ -20,7 +20,7 @@ describe('form directives', function() {
       '<form name="form">' +
         '<input type="password" ng-model="user.password" name="password">' +
         '<input type="password" ng-model="user.cpassword" ' +
-          'hz-password-match="form.password">' +
+          'hz-password-match="form.password">' + "<input type='password' name='hello' value='' />"+
       '</form>';
 
     beforeEach(inject(function($injector){
