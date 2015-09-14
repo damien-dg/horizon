@@ -32,6 +32,16 @@ describe('hzLoginCtrl', function(){
       var controller = $controller('hzLoginCtrl', { $scope: scope });
       expect(scope.auth_type).toEqual('credentials');
     });
+
+      describe('$scope.ueseless_variable', function(){
+          it('should initialize to test', function(){
+              var scope = {};
+              var controller = $controller('hzLoginCtrl', { $scope: scope });
+              expect(scope.ueseless_variable).toEqual('test');
+          });
+
+
+
   });
 
 });
