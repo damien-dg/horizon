@@ -23,7 +23,7 @@ LOG = logging.getLogger(__name__)
 
 
 class Aggregates(horizon.Panel):
-    name = _("THUYANHLEPANEL")
+    name = _("Host Aggregates")
     slug = 'aggregates'
     permissions = ('openstack.services.compute',)
 
