@@ -140,7 +140,7 @@ class HostAggregatesTable(tables.DataTable):
     class Meta(object):
         name = "host_aggregates"
         hidden_title = False
-        verbose_name = _("Host Aggregates")
+        verbose_name = _("THUYUYUYUYUY")
         table_actions = (AggregateFilterAction,
                          CreateAggregateAction,
                          DeleteAggregateAction)
