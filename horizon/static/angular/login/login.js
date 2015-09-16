@@ -28,7 +28,7 @@
       $scope.auth_type = 'credentials';
       $scope.ueseless_variable = 'test';
       $scope.alertNothing = function(){
-        window.alert('potato');
+        window.alert('thuy anh wuz here');
       };
     })
 
