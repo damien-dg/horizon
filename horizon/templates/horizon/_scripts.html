@@ -8,7 +8,7 @@
 <script type="text/javascript" src="{% url 'horizon:jsi18n' 'horizon' %}"></script>
 
 {% comment %} Compress jQuery, Angular, Plugins, Bootstrap, Hogan.js and Horizon-specific JS. {% endcomment %}
-{% compress js %}
+
 <script type="text/javascript">var STATIC_URL = "{{ STATIC_URL }}";</script>
 <script src='{{ STATIC_URL }}horizon/lib/angular/angular-cookies.js'></script>
 <script src='{{ STATIC_URL }}horizon/lib/angular/angular-sanitize.js'></script>
@@ -109,7 +109,7 @@
 {% endfor %}
 
 {% block custom_js_files %}{% endblock %}
-{% endcompress %}
+
 
 {% comment %} Client-side Templates (These should *not* be inside the "compress" tag.) {% endcomment %}
 {% include "horizon/client_side/templates.html" %}
