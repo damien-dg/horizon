@@ -40,7 +40,7 @@ class IndexView(tables.MultiTableView):
     table_classes = (project_tables.HostAggregatesTable,
                      project_tables.AvailabilityZonesTable)
     template_name = constants.AGGREGATES_TEMPLATE_NAME
-    page_title = _("Host Aggregates")
+    page_title = _("HOLALALALAL")
 
     def get_host_aggregates_data(self):
         request = self.request
