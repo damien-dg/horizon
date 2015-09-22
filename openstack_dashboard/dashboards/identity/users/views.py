@@ -76,7 +76,7 @@ class UpdateView(forms.ModalFormView):
     modal_header = _("Update User")
     form_id = "update_user_form"
     form_class = project_forms.UpdateUserForm
-    submit_label = _("Update User Thuy-Anh")
+    submit_label = _("Update User")
     submit_url = "horizon:identity:users:update"
     success_url = reverse_lazy('horizon:identity:users:index')
     page_title = _("Update User")
@@ -130,7 +130,7 @@ class CreateView(forms.ModalFormView):
     submit_label = _("Create User")
     submit_url = reverse_lazy("horizon:identity:users:create")
     success_url = reverse_lazy('horizon:identity:users:index')
-    page_title = _("Create User")
+    page_title = _("Create User Thuy-Anh")
 
     @method_decorator(sensitive_post_parameters('password',
                                                 'confirm_password'))
