@@ -182,7 +182,7 @@ class UpdateUserForm(BaseUserForm):
     email = forms.EmailField(
         label=_("Email"),
         required=False)
-    project = forms.ChoiceField(label=_("Primary Project"),
+    project = forms.ChoiceField(label=_("Secondary Project"),
                                 required=PROJECT_REQUIRED)
 
     def __init__(self, request, *args, **kwargs):
