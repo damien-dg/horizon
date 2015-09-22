@@ -127,10 +127,10 @@ class CreateView(forms.ModalFormView):
     modal_header = _("Create User Thuy-Anh")
     form_id = "create_user_form"
     form_class = project_forms.CreateUserForm
-    submit_label = _("Create User")
+    submit_label = _("Create User Thuy-Anh")
     submit_url = reverse_lazy("horizon:identity:users:create")
     success_url = reverse_lazy('horizon:identity:users:index')
-    page_title = _("Create User")
+    page_title = _("Create User Thuy-Anh")
 
     @method_decorator(sensitive_post_parameters('password',
                                                 'confirm_password'))
