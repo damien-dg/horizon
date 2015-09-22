@@ -76,7 +76,7 @@ class UpdateView(forms.ModalFormView):
     modal_header = _("Update User")
     form_id = "update_user_form"
     form_class = project_forms.UpdateUserForm
-    submit_label = _("Update User")
+    submit_label = _("Update User Thuy-Anh")
     submit_url = "horizon:identity:users:update"
     success_url = reverse_lazy('horizon:identity:users:index')
     page_title = _("Update User")
