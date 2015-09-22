@@ -28,7 +28,7 @@ DISABLE = 1
 
 class CreateUserLink(tables.LinkAction):
     name = "create"
-    verbose_name = _("Create Thuy-Anh")
+    verbose_name = _("Create User")
     url = "horizon:identity:users:create"
     classes = ("ajax-modal",)
     icon = "plus"

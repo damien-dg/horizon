@@ -98,7 +98,7 @@ class CreateUserForm(PasswordMixin, BaseUserForm):
     email = forms.EmailField(
         label=_("Email"),
         required=False)
-    project = forms.DynamicChoiceField(label=_("Primary Project"),
+    project = forms.DynamicChoiceField(label=_("Secondary Project"),
                                        required=PROJECT_REQUIRED,
                                        add_item_link=ADD_PROJECT_URL)
     role_id = forms.ChoiceField(label=_("Role"),

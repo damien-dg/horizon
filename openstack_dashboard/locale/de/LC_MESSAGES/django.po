@@ -5533,7 +5533,7 @@ msgstr "Keine verfügbaren Projekte"
 
 #: dashboards/identity/users/forms.py:99
 #: dashboards/identity/users/forms.py:177
-msgid "Primary Project"
+msgid "Secondary Project"
 msgstr "Primäres Projekt"
 
 #: dashboards/identity/users/forms.py:102
