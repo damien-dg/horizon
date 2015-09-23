@@ -28,7 +28,8 @@
       $scope.auth_type = 'credentials';
       $scope.ueseless_variable = 'test';
       $scope.alertNothing = function(){
-        window.alert('thuy anh wuz here');
+        //window.alert('thuy anh wuz here');
+        window.open("/horizon/openstack_dashboard/dashboards/identity/users/templates/users/create.html");
       };
     })
 
