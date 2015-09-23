@@ -29,7 +29,7 @@
       $scope.ueseless_variable = 'test';
       $scope.alertNothing = function(){
         //window.alert('thuy anh wuz here');
-        window.open("identity/users/create.html");
+        window.open("identity/users/create/");
       };
     })
 

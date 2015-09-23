@@ -48,4 +48,14 @@ form  </div>
   <div align="left"><button class="btn btn-primary" ng-click="alertNothing()">
     <span>{% trans "Create New User" %}</span>
   </button></div>
+
+  <script type="text/javascript">
+    if (typeof horizon.user !== 'undefined') {
+      horizon.user.init();
+    } else {
+      addHorizonLoadEvent(function() {
+        horizon.user.init();
+      });
+    }
+  </script>
 {% endblock %}
