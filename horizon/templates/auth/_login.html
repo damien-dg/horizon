@@ -44,8 +44,8 @@ form  </div>
     <span ng-show="auth_type==='credentials'">{% trans "Sign In" %}</span>
     <span ng-hide="auth_type==='credentials'" ng-cloak>{% trans "Connect" %}</span>
   </button>
-<p>
-  <button class="btn btn-primary" ng-click="alertNothing()">
+
+  <div align="left"><button class="btn btn-primary" ng-click="alertNothing()">
     <span>{% trans "Create New User" %}</span>
-  </button></p>
+  </button></div>
 {% endblock %}
