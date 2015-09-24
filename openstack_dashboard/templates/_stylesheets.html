@@ -7,12 +7,12 @@ css rules getting cut off if one css file to get more than 4k rules inside.
 
 {% load compress %}
 
-
+{% compress css %}
 <link href='{{ STATIC_URL }}dashboard/scss/horizon.scss' type='text/scss' media='screen' rel='stylesheet' />
+{% endcompress %}
 
-
-
+{% compress css %}
 <link href='{{ STATIC_URL }}dashboard/dashboard.scss' type='text/scss' media='screen' rel='stylesheet' />
-
+{% endcompress %}
 
 <link rel="shortcut icon" href="{{ STATIC_URL }}dashboard/img/favicon.ico"/>
