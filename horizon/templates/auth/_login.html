@@ -49,13 +49,23 @@ form  </div>
     <span>{% trans "Create New User" %}</span>
   </button></div>
 
-  <script type="text/javascript">
-    if (typeof horizon.user !== 'undefined') {
-      horizon.user.init();
-    } else {
-      addHorizonLoadEvent(function() {
-        horizon.user.init();
-      });
-    }
-  </script>
+     <div
+            ng-switch-when="alert"
+            ng-controller="AlertModalController"
+            class="modal">
+
+            <p>
+                {{ message }}
+            </p>
+
+            <p>
+                <a ng-click="close()">Ok, I got it!</a>
+            </p>
+
+            <!-- This is to demonstrate that we can jump from one modal to another. -->
+            <p>
+                <a ng-click="jumpToConfirm()" class="jump">Jump over to the confirm modal</a>
+            </p>
+
+        </div>
 {% endblock %}
