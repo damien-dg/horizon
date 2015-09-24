@@ -48,7 +48,7 @@
                 };
               }
               );
-    .controller('AlertModalController', function($scope, modals){
+    angular.module('hz').controller('AlertModalController', function($scope, modals){
        $scope.message = ( modals.params().message || "Whoa!" );
                 // ---
                 // PUBLIC METHODS.
