@@ -47,7 +47,8 @@
                     );
                 };
               }
-    .controller('AlertModalController', function($scope, modals)){
+              );
+    .controller('AlertModalController', function($scope, modals){
        $scope.message = ( modals.params().message || "Whoa!" );
                 // ---
                 // PUBLIC METHODS.
@@ -55,7 +56,7 @@
                 // Wire the modal buttons into modal resolution actions.
                 $scope.close = modals.resolve;
 
-    }
+    });
 
     .service(
             "modals",
