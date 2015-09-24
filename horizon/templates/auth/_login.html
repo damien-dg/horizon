@@ -48,7 +48,11 @@ form  </div>
   <div align="left"><button class="btn btn-primary" ng-click="alertNothing()">
     <span>{% trans "Create New User" %}</span>
   </button></div>
-
+ <div
+        bn-modals
+        ng-show="subview"
+        class="m-modals"
+        ng-switch="subview">
      <div
             ng-switch-when="alert"
             ng-controller="AlertModalController"
@@ -67,5 +71,6 @@ form  </div>
                 <a ng-click="jumpToConfirm()" class="jump">Jump over to the confirm modal</a>
             </p>
 
+        </div>
         </div>
 {% endblock %}
