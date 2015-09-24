@@ -60,7 +60,7 @@
 }
 
 body {
-  background-color: #F3F0F0;
+  background-color: $body-bg;
   &:not(#splash) {
     background-image: url('../img/sidebar_bg.png');
     background-repeat: repeat-y;
@@ -128,7 +128,7 @@ h2 {
 }
 
 .sidebar {
-  background-color: #ff0000;
+  background-color: $sidebar-background-color;
   padding-top: 20px;
   margin-left: -$sidebar-width;
   left: $sidebar-width;
@@ -149,7 +149,7 @@ h2 {
 }
 
 .sidebar .nav-tabs li.active a {
-  background-color: #ff0000;
+  background-color: $body-bg;
 }
 
 
@@ -434,7 +434,7 @@ table form {
 
 .table tfoot tr td {
   border-top: 1px solid $table-border-color;
-  background-color: #ff0000;
+  background-color: #f1f1f1;
   font-size: 11px;
   line-height: 14px;
 }
@@ -674,7 +674,7 @@ form label {
 
 .static_page {
   float: left; //should be removed (jtomasek)
-  background-color: #ff0000; //should be removed (jtomasek)
+  background-color: $body-bg; //should be removed (jtomasek)
   > form {
     margin-bottom: 0;
   }
@@ -1462,7 +1462,6 @@ label.log-length {
 .modal-body fieldset .form-field select[data-add-item-url] {
   width: 275px;
   margin-right: 2px;
-  background-color: red;
 }
 
 /* Styling for draged network object */
