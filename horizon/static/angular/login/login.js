@@ -58,7 +58,7 @@
 
     });
 
-    .service(
+    angular.module('hz').service(
             "modals",
             function( $rootScope, $q ) {
                 // I represent the currently active modal window instance.
@@ -112,7 +112,7 @@
      * this directive is the hook to make it more dynamic.
      * Only visible if websso is enabled.
      */
-    .directive('hzLoginFinder', function($timeout) {
+    angular.module('hz').directive('hzLoginFinder', function($timeout) {
       return {
         restrict: 'A',
         link: function(scope, element) {
@@ -176,7 +176,7 @@
       }; // end of return
     }); // end of directive
 
-.directive('bnModals', function($rootScope, modals){
+angular.module('hz').directive('bnModals', function($rootScope, modals){
   return( link );
                 // I bind the JavaScript events to the scope.
                 function link( scope, element, attributes ) {
