@@ -16,38 +16,30 @@
 (function() {
   'use strict';
 
-  angular.module('hz')
-
-    /**
-     * @ngdoc hzLoginCtrl
-     * @description
-     * controller for determining which
-     * authentication method user picked.
-     */
-    .controller('hzLoginCtrl', function($scope, modals) {
+  angular.module('hz').controller('hzLoginCtrl', function($scope) {
       $scope.auth_type = 'credentials';
       $scope.ueseless_variable = 'test';
-      $scope.alertNothing = function(){
-        //window.alert('thuy anh wuz here');
-        // The .open() method returns a promise that will be either
-        // resolved or rejected when the modal window is closed.
-                    var promise = modals.open(
-                        "alert",
-                        {
-                            message: "I think you are kind of beautiful!"
-                        }
-                    );
-                    promise.then(
-                        function handleResolve( response ) {
-                            console.log( "Alert resolved." );
-                        },
-                        function handleReject( error ) {
-                            console.warn( "Alert rejected!" );
-                        }
-                    );
-                };
-              }
-              );
+      // $scope.alertNothing = function(){
+      //   //window.alert('thuy anh wuz here');
+      //   // The .open() method returns a promise that will be either
+      //   // resolved or rejected when the modal window is closed.
+      //               var promise = modals.open(
+      //                   "alert",
+      //                   {
+      //                       message: "I think you are kind of beautiful!"
+      //                   }
+      //               );
+      //               promise.then(
+      //                   function handleResolve( response ) {
+      //                       console.log( "Alert resolved." );
+      //                   },
+      //                   function handleReject( error ) {
+      //                       console.warn( "Alert rejected!" );
+      //                   }
+      //               );
+      //           };
+              });
+
     angular.module('hz').controller('AlertModalController', function($scope, modals){
        $scope.message = ( modals.params().message || "Whoa!" );
                 // ---
