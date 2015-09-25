@@ -214,3 +214,4 @@ angular.module('hz').directive('bnModals', function($rootScope, modals){
 }
 
 );
+});
