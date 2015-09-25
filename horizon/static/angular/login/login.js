@@ -58,8 +58,7 @@
 
     });
 
-    angular.module('hz').service(
-            "modals",
+    angular.module('hz').service('modals',
             function( $rootScope, $q ) {
                 // I represent the currently active modal window instance.
                 var modal = {
