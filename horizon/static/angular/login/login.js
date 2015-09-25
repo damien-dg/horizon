@@ -102,6 +102,7 @@
                     $rootScope.$emit( "modals.open", type );
                     return( modal.deferred.promise );
                 };
+              };
 
     /**
      * @ngdoc hzLoginFinder
@@ -212,6 +213,5 @@ angular.module('hz').directive('bnModals', function($rootScope, modals){
                     );
                 }
 }
-
 );
 });
