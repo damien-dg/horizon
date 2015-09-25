@@ -58,8 +58,10 @@
 
     });
 
-    angular.module('hz').service('modals',
-            function( $rootScope, $q ) {
+    angular.module('hz').service('modals', modals);
+    modals.$inject=['$rootScope', '$q'];
+    
+            function modals( $rootScope, $q ) {
                 // I represent the currently active modal window instance.
                 var modal = {
                     deferred: null,
@@ -99,8 +101,7 @@
                     // would require a chronic watching of acute application events.
                     $rootScope.$emit( "modals.open", type );
                     return( modal.deferred.promise );
-                }
-                );
+                };
 
     /**
      * @ngdoc hzLoginFinder
