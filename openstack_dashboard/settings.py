@@ -136,18 +136,18 @@ STATICFILES_FINDERS = (
     'compressor.finders.CompressorFinder',
 )
 
-# COMPRESS_PRECOMPILERS = (
-#     ('text/scss', 'django_pyscss.compressor.DjangoScssFilter'),
-# )
+COMPRESS_PRECOMPILERS = (
+     ('text/scss', 'django_pyscss.compressor.DjangoScssFilter'),
+)
 
-# COMPRESS_CSS_FILTERS = (
-#     'compressor.filters.css_default.CssAbsoluteFilter',
-# )
+COMPRESS_CSS_FILTERS = (
+     'compressor.filters.css_default.CssAbsoluteFilter',
+)
 
-# COMPRESS_ENABLED = False
-# COMPRESS_OUTPUT_DIR = 'dashboard'
-# COMPRESS_CSS_HASHING_METHOD = 'hash'
-# COMPRESS_PARSER = 'compressor.parser.HtmlParser'
+COMPRESS_ENABLED = True
+COMPRESS_OUTPUT_DIR = 'dashboard'
+COMPRESS_CSS_HASHING_METHOD = 'hash'
+COMPRESS_PARSER = 'compressor.parser.HtmlParser'
 
 INSTALLED_APPS = [
     'openstack_dashboard',
