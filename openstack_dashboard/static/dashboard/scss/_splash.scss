@@ -7,17 +7,17 @@
 #splash {
 
   .login {
-    background: url(../img/logo-splash.png) no-repeat center 35px;
+    background: #25AAA0;
     position: absolute;
     top: 80px;
     left: 50%;
     margin: 0 0 0 -195px;
-    padding-top: 170px;
+    padding-top: 60px;
     width: 390px;
-    border: 1px solid $border-color;
+    border: 1px solid #10206B;
     max-height: none;
     border-radius: 6px;
-    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 7px #66C3BC;
     background-clip: padding-box;
 
     p#help_text {
