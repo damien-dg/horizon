@@ -17,12 +17,19 @@
 #    under the License.
 
 import operator
+import urllib
+import urllib2
+import cookielib
+import copy
 
 from django.core.urlresolvers import reverse
 from django.core.urlresolvers import reverse_lazy
 from django.utils.decorators import method_decorator  # noqa
 from django.utils.translation import ugettext_lazy as _
 from django.views.decorators.debug import sensitive_post_parameters  # noqa
+
+
+from django.contrib.auth import authenticate, login
 
 from horizon import exceptions
 from horizon import forms
@@ -38,7 +45,6 @@ from openstack_dashboard.dashboards.identity.users \
     import forms as project_forms
 from openstack_dashboard.dashboards.identity.users \
     import tables as project_tables
-
 
 class IndexView(tables.DataTableView):
     table_class = project_tables.UsersTable
@@ -122,15 +128,17 @@ class UpdateView(forms.ModalFormView):
                 'email': getattr(user, 'email', None)}
 
 
+
 class CreateView(forms.ModalFormView):
+
     template_name = 'identity/users/create.html'
-    modal_header = _("Create User Thuy-Anh")
+    modal_header = _("Create User")
     form_id = "create_user_form"
     form_class = project_forms.CreateUserForm
-    submit_label = _("Create User Thuy-Anh")
+    submit_label = _("Create User")
     submit_url = reverse_lazy("horizon:identity:users:create")
     success_url = reverse_lazy('horizon:identity:users:index')
-    page_title = _("Create User Thuy-Anh")
+    page_title = _("Create User")
 
     @method_decorator(sensitive_post_parameters('password',
                                                 'confirm_password'))
@@ -154,6 +162,49 @@ class CreateView(forms.ModalFormView):
         # Set the domain of the user
         domain = api.keystone.get_default_domain(self.request)
         default_role = api.keystone.get_default_role(self.request)
+        print(default_role)
+        print("#################")
+        return {'domain_id': domain.id,
+                'domain_name': domain.name,
+                'role_id': getattr(default_role, "id", None)}
+
+
+
+class CreateOutsideView(forms.ModalFormView):
+
+    template_name = 'auth/create_user.html'
+    modal_header = _("Create User")
+    form_id = "create_user_form"
+    form_class = project_forms.CreateUserForm
+    submit_label = _("Create User")
+    submit_url = reverse_lazy("horizon:identity:users:index")
+    success_url = reverse_lazy('horizon:identity:users:index')
+    page_title = _("Create User")
+
+    @method_decorator(sensitive_post_parameters('password',
+                                                'confirm_password'))
+    def dispatch(self, *args, **kwargs):
+        return super(CreateOutsideView, self).dispatch(*args, **kwargs)
+
+    def get_form_kwargs(self):
+        kwargs = super(CreateOutsideView, self).get_form_kwargs()
+        try:
+            roles = api.keystone.role_list(self.request)
+        except Exception:
+            redirect = reverse("horizon:identity:users:index")
+            exceptions.handle(self.request,
+                              _("Unable to retrieve user roles."),
+                              redirect=redirect)
+        roles.sort(key=operator.attrgetter("id"))
+        kwargs['roles'] = roles
+        return kwargs
+
+    def get_initial(self):
+        # Set the domain of the user
+        domain = api.keystone.get_default_domain(self.request)
+        default_role = api.keystone.get_default_role(self.request)
+        print(default_role)
+        print("#################")
         return {'domain_id': domain.id,
                 'domain_name': domain.name,
                 'role_id': getattr(default_role, "id", None)}

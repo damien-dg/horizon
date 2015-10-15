@@ -1,0 +1,9 @@
+{
+
+"username" : "admin",
+"password" : "pass",
+"csrfmiddlewaretoken" : "tOzSgMn0pReP1TN1P58yiNSfPsCEAZu7",
+"next" : "/",
+"region" : "http://192.207.61.146:5000/v2.0"
+
+}

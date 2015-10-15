@@ -45,9 +45,14 @@ form  </div>
     <span ng-hide="auth_type==='credentials'" ng-cloak>{% trans "Connect" %}</span>
   </button>
 
-  <div align="left"><button class="btn btn-primary" ng-click="alertNothing()">
-    <span>{% trans "Create New User Thuy-Anh" %}</span>
-  </button></div>
+  <!--<div align="left"><button class="btn btn-primary" ng-click="alertNothing()">-->
+
+    <!--<span>{% trans "Create New User Thuy-Anh" %}</span>-->
+  <!--</button></div>-->
+
+    </button>
+
+
  <div
         bn-modals
         ng-show="subview"
@@ -73,4 +78,13 @@ form  </div>
 
         </div>
         </div>
+
+
+<div class="pull-left">
+    <a ng-click="login()" title="Create User Thuy-Anh" class="btn btn-default btn-sm" >
+        <span class="fa fa-plus"></span>
+        Create User
+    </a>
+    <a id="create_new_user" class="ajax-modal" href="/auth/create_user/"></a>
+</div>
 {% endblock %}

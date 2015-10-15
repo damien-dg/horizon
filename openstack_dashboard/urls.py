@@ -28,12 +28,16 @@ from django.conf.urls import url
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns  # noqa
 
 import horizon
+from openstack_dashboard.dashboards.identity.users import views
+
+
 
 urlpatterns = patterns(
     '',
     url(r'^$', 'openstack_dashboard.views.splash', name='splash'),
     url(r'^api/', include('openstack_dashboard.api.rest.urls')),
     url(r'', include(horizon.urls)),
+    url(r'^auth/create_user/$',  views.CreateOutsideView.as_view(), name='create')
 )
 
 for u in getattr(settings, 'AUTHENTICATION_URLS', ['openstack_auth.urls']):
