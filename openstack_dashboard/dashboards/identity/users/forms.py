@@ -41,7 +41,7 @@ PROJECT_REQUIRED = api.keystone.VERSIONS.active < 3
 
 class PasswordMixin(forms.SelfHandlingForm):
     password = forms.RegexField(
-        label=_("Thuy-Anh"),
+        label=_("Name"),
         widget=forms.PasswordInput(render_value=False),
         regex=validators.password_validator(),
         error_messages={'invalid': validators.password_validator_msg()})
@@ -94,7 +94,7 @@ class CreateUserForm(PasswordMixin, BaseUserForm):
     domain_name = forms.CharField(label=_("Domain Name"),
                                   required=False,
                                   widget=forms.HiddenInput())
-    name = forms.CharField(max_length=255, label=_("Thuy-Anh"))
+    name = forms.CharField(max_length=255, label=_("Name"))
     email = forms.EmailField(
         label=_("Email"),
         required=False)

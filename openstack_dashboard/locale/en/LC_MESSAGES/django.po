@@ -5612,7 +5612,7 @@ msgstr ""
 #: dashboards/identity/users/views.py:127
 #: dashboards/identity/users/views.py:130
 #: dashboards/identity/users/views.py:133
-msgid "Create User Thuy-Anh"
+msgid "Create User"
 msgstr ""
 
 #: dashboards/identity/users/tables.py:60
