@@ -1,4 +1,5 @@
 {% load i18n sizeformat %}
+{% load url from future %}
 <div class="quota-dynamic">
   <h3 class="quota-heading">{% trans "Usage Summary" %}</h3>
 </div>
@@ -18,6 +19,7 @@
   </form>
   <p id="activity">
     <span><strong>{% trans "Active Instances:" %}</strong> {{ usage.summary.instances|default:'0' }}</span>
+    <span><strong>{% trans "InstancesGENN:" %}</strong>{{ instances }}</span>
     <span><strong>{% trans "Active RAM:" %}</strong> {{ usage.summary.memory_mb|mb_float_format|default:'0' }}</span>
     <span><strong>{% trans "This Period's VCPU-Hours:" %}</strong> {{ usage.summary.vcpus|floatformat:2|default:'0' }}</span>
     <span><strong>{% trans "This Period's GB-Hours:" %}</strong> {{ usage.summary.disk_gb_hours|floatformat:2|default:'0' }}</span>
