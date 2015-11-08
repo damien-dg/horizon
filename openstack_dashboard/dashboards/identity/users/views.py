@@ -41,10 +41,13 @@ from horizon import views
 from openstack_dashboard import api
 from openstack_dashboard import policy
 
+
+
 from openstack_dashboard.dashboards.identity.users \
     import forms as project_forms
 from openstack_dashboard.dashboards.identity.users \
     import tables as project_tables
+
 
 class IndexView(tables.DataTableView):
     table_class = project_tables.UsersTable
@@ -156,6 +159,9 @@ class CreateView(forms.ModalFormView):
                               redirect=redirect)
         roles.sort(key=operator.attrgetter("id"))
         kwargs['roles'] = roles
+        print "#######################################"
+        print roles[0].id
+        print "#######################################"
         return kwargs
 
     def get_initial(self):
@@ -175,39 +181,28 @@ class CreateOutsideView(forms.ModalFormView):
     template_name = 'auth/create_user.html'
     modal_header = _("Create User")
     form_id = "create_user_form"
-    form_class = project_forms.CreateUserForm
+    form_class = project_forms.OutsideCreateUserForm
     submit_label = _("Create User")
-    submit_url = reverse_lazy("horizon:identity:users:index")
-    success_url = reverse_lazy('horizon:identity:users:index')
+    submit_url = "/auth/create_user/"
+    success_url = "/auth/login/"
     page_title = _("Create User")
 
-    @method_decorator(sensitive_post_parameters('password',
-                                                'confirm_password'))
     def dispatch(self, *args, **kwargs):
         return super(CreateOutsideView, self).dispatch(*args, **kwargs)
 
     def get_form_kwargs(self):
         kwargs = super(CreateOutsideView, self).get_form_kwargs()
-        try:
-            roles = api.keystone.role_list(self.request)
-        except Exception:
-            redirect = reverse("horizon:identity:users:index")
-            exceptions.handle(self.request,
-                              _("Unable to retrieve user roles."),
-                              redirect=redirect)
-        roles.sort(key=operator.attrgetter("id"))
-        kwargs['roles'] = roles
+
+        kwargs['roles'] = ['8b2a8e6f8db24a268b275c646903f263', '8b2a8e6f8db24a268b275c646903f263']
         return kwargs
 
     def get_initial(self):
         # Set the domain of the user
-        domain = api.keystone.get_default_domain(self.request)
-        default_role = api.keystone.get_default_role(self.request)
-        print(default_role)
-        print("#################")
-        return {'domain_id': domain.id,
-                'domain_name': domain.name,
-                'role_id': getattr(default_role, "id", None)}
+        # domain = api.keystone.get_default_domain(self.request)
+        # default_role = api.keystone.get_default_role(self.request)
+        # print(default_role)
+        # print("#################")
+        return None
 
 
 class DetailView(views.HorizonTemplateView):

@@ -18,6 +18,7 @@
 
 import collections
 import logging
+import subprocess
 
 import django
 from django.conf import settings
@@ -84,6 +85,39 @@ class BaseUserForm(forms.SelfHandlingForm):
 
 
 ADD_PROJECT_URL = "horizon:identity:projects:create"
+
+class OutsideCreateUserForm(forms.SelfHandlingForm):
+    name = forms.CharField(max_length=255, label=_("Name"))
+    email = forms.EmailField(label=_("Email"),
+                             required=False)
+    password = forms.CharField(label=_("Password"), widget=forms.PasswordInput)
+
+    def __init__(self, request, *args, **kwargs):
+        roles = kwargs.pop('roles')
+        super(OutsideCreateUserForm, self).__init__(request, *args, **kwargs)
+        # Starting from 1.7 Django uses OrderedDict for fields and keyOrder
+        # no longer works for it
+        role_choices = [roles]
+        print self.fields['password'].widget.__dict__
+        print self.fields['email']
+
+    @sensitive_variables('data')
+    def handle(self, request, data):
+        print "#########################"
+        print data['name']
+        print "#######################"
+        try:
+            subprocess.Popen(args=['bash ./openstack_dashboard/dashboards/identity/users/create_user.sh {0} {1} {2}'.format(data['name'], data['password'], data['email']) ], shell=True)
+
+            print "#########################"
+            print "CRETE NEW USER"
+            print "#######################"
+            messages.success(request,
+                             _('User "%s" was successfully created.')
+                             % data['name'])
+        except Exception:
+            exceptions.handle(request, _('Unable to create user.'))
+
 
 
 class CreateUserForm(PasswordMixin, BaseUserForm):
