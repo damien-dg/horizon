@@ -47,37 +47,6 @@
 
         };
 
-        $scope.login = function () {
-            console.log($cookies);
-            var values = {
-                'username': 'admin',
-                'password': 'pass',
-                'csrfmiddlewaretoken': $cookies.csrftoken,
-                'region': 'http://192.207.61.146:5000/v2.0'
-            };
-            $http({
-                method: 'POST',
-                url: 'http://localhost:9000/auth/login/',
-                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-                transformRequest: function(obj) {
-                var str = [];
-                for(var p in obj)
-                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-                return str.join("&");
-               },
-                data: values }).then(function (resp) {
-                console.log($cookies, resp);
-
-                console.log(angular.element('#create_new_user'));
-                angular.element("#create_new_user").click();
-                //apiService.get('http://localhost:9000/admin/').then(function(resp){
-                //    console.log(resp);
-                //});
-            });
-
-
-        }
-
     });
 
 

@@ -19,6 +19,7 @@
 import collections
 import logging
 import subprocess
+from django.contrib import messages
 
 import django
 from django.conf import settings
@@ -29,7 +30,6 @@ from django.views.decorators.debug import sensitive_variables  # noqa
 
 from horizon import exceptions
 from horizon import forms
-from horizon import messages
 from horizon.utils import functions as utils
 from horizon.utils import validators
 
@@ -87,10 +87,10 @@ class BaseUserForm(forms.SelfHandlingForm):
 ADD_PROJECT_URL = "horizon:identity:projects:create"
 
 class OutsideCreateUserForm(forms.SelfHandlingForm):
-    name = forms.CharField(max_length=255, label=_("Name"))
+    name = forms.SlugField(max_length=255, label=_("Name"))
     email = forms.EmailField(label=_("Email"),
-                             required=False)
-    password = forms.CharField(label=_("Password"), widget=forms.PasswordInput)
+                             required=True)
+    password = forms.SlugField(label=_("Password"), widget=forms.PasswordInput)
 
     def __init__(self, request, *args, **kwargs):
         roles = kwargs.pop('roles')
@@ -98,24 +98,44 @@ class OutsideCreateUserForm(forms.SelfHandlingForm):
         # Starting from 1.7 Django uses OrderedDict for fields and keyOrder
         # no longer works for it
         role_choices = [roles]
+        self.user_available = False
+        self.user_exists = False
         print self.fields['password'].widget.__dict__
         print self.fields['email']
 
     @sensitive_variables('data')
     def handle(self, request, data):
-        print "#########################"
-        print data['name']
-        print "#######################"
-        try:
-            subprocess.Popen(args=['bash ./openstack_dashboard/dashboards/identity/users/create_user.sh {0} {1} {2}'.format(data['name'], data['password'], data['email']) ], shell=True)
 
-            print "#########################"
-            print "CRETE NEW USER"
-            print "#######################"
-            messages.success(request,
-                             _('User "%s" was successfully created.')
-                             % data['name'])
+        try:
+            user_existence = subprocess.Popen(args=['bash ./openstack_dashboard/dashboards/identity/users/check_user_exists.sh {0}'.format(data['name'])], shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+            out = user_existence.stdout
+            user_existence.wait()
+            self.user_available = False
+            self.user_exists = False
+            while True:
+
+                line = out.readline()
+                if line != '':
+                    print "#########################PRINTING LINE"
+                    print line
+                    print "#######################"
+                    if "No user with a name or ID" in line:
+                        print "USER NOT FOUND"
+                        self.user_available = True
+                        break
+                else:
+                    break
+
+            if self.user_available == False:
+                self.user_exists = True
+                return False
+            print user_existence.stdout
+            user_creation = subprocess.Popen(args=['bash ./openstack_dashboard/dashboards/identity/users/create_user.sh {0} {1} {2}'.format(data['name'], data['password'], data['email']) ], shell=True)
+            user_creation.wait()
+            messages.add_message(request, messages.SUCCESS, "User Created Successfully")
+            return True
         except Exception:
+            messages.add_message(request, messages.INFO, "User Could not be Created ")
             exceptions.handle(request, _('Unable to create user.'))
 
 

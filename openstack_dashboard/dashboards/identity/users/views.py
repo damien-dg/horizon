@@ -184,7 +184,7 @@ class CreateOutsideView(forms.ModalFormView):
     form_class = project_forms.OutsideCreateUserForm
     submit_label = _("Create User")
     submit_url = "/auth/create_user/"
-    success_url = "/auth/login/"
+    success_url = "/auth/login"
     page_title = _("Create User")
 
     def dispatch(self, *args, **kwargs):
@@ -203,6 +203,13 @@ class CreateOutsideView(forms.ModalFormView):
         # print(default_role)
         # print("#################")
         return None
+
+# class Login(object):
+#
+#     def __init__(self):
+#
+#     def dispatch(self):
+#         print self.request
 
 
 class DetailView(views.HorizonTemplateView):

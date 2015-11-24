@@ -163,7 +163,26 @@ class DeleteUsersAction(tables.DeleteAction):
     def delete(self, request, obj_id):
         api.keystone.user_delete(request, obj_id)
 
+class UpgradeUsersAction(tables.Action):
+    name = "upgrade_user"
+    verbose_name = _("Upgrade User")
+    preempt = True
+    policy_rules = (('identity', 'admin_required'),)
 
+
+    def allowed(self, request, datum):
+        if not api.keystone.keystone_can_edit_user() or \
+                (datum and datum.id == request.user.id):
+            return False
+        return True
+
+    def single(self, table, request, obj_id):
+        try:
+            api.keystone.add_tenant_user_role(request, user=obj_id, role="9fe2ff9ee4384b1894a90878d3e92bab", project="5fa3b387c9114beabd34a373e13a8b2a")
+            api.keystone.remove_tenant_user_role(request, user=obj_id, role="8b2a8e6f8db24a268b275c646903f263", project="5fa3b387c9114beabd34a373e13a8b2a")
+            messages.success(request, "User has been upgraded!")
+        except Exception:
+            messages.error(request, "User has already been upgraded")
 class UserFilterAction(tables.FilterAction):
     def filter(self, table, users, filter_string):
         """Naive case-insensitive search."""
@@ -244,6 +263,6 @@ class UsersTable(tables.DataTable):
         name = "users"
         verbose_name = _("Users")
         row_actions = (EditUserLink, ChangePasswordLink, ToggleEnabled,
-                       DeleteUsersAction)
+                       DeleteUsersAction, UpgradeUsersAction)
         table_actions = (UserFilterAction, CreateUserLink, DeleteUsersAction)
         row_class = UpdateRow

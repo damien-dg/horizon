@@ -2,6 +2,7 @@
 {% load i18n %}
 
 {% block modal-body-right %}
+
     <h3>{% trans "Description:" %}</h3>
     <p>{% trans "Create a new user and set related properties including the Primary Project and Role." %}</p>
     <script type="text/javascript">
@@ -12,5 +13,16 @@
 //            horizon.user.init();
 //        });
 //    }
+
     </script>
+
+{% if  form.user_exists %}
+<div style="padding-top:2rem">
+    <span class="alert alert-info" style="border-radius:1rem;background-color:lightcoral; color:darkred"> User already Exists! </span>
+</div>
+{% endif %}
 {% endblock %}
+
+
+
+
