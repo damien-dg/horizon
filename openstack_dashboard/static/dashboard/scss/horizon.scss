@@ -319,7 +319,7 @@ a.current_item:hover h4 {
 }
 
 th {
-  background: #f1f1f1;
+  background: #F5EDF3;
 }
 td.anchor {
   padding: 0;
@@ -435,7 +435,7 @@ table form {
 
 .table tfoot tr td {
   border-top: 1px solid $table-border-color;
-  background-color: #f1f1f1;
+  background-color: #F5EDF3;
   font-size: 11px;
   line-height: 14px;
 }
@@ -635,7 +635,7 @@ td.loading {
 
 form label {
     text-align: left;
-    color: $gray;
+    color: #365C69;
     font-weight: bold;
     display: inline-block;
 }
@@ -1313,7 +1313,7 @@ label.log-length {
 
   .form-control-feedback { top: 0; }
   .no_results {
-    border: 1px solid $table-border-color;
+    border: 1px solid #b2d1d3;
     padding: 9px 10px 8px 10px;
     opacity: 0.5;
   }
