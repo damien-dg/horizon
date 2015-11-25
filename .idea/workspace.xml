@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3217776-d1a4-4043-910f-deb6f3e38686" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/openstack_dashboard/dashboards/identity/users/check_user_exists.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/openstack_dashboard/dashboards/identity/users/upgrade_user.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/horizon/templates/auth/_create_user.html" afterPath="$PROJECT_DIR$/horizon/templates/auth/_create_user.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/horizon/templates/auth/_login.html" afterPath="$PROJECT_DIR$/horizon/templates/auth/_login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openstack_dashboard/dashboards/identity/users/create_user.sh" afterPath="$PROJECT_DIR$/openstack_dashboard/dashboards/identity/users/create_user.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openstack_dashboard/dashboards/identity/users/forms.py" afterPath="$PROJECT_DIR$/openstack_dashboard/dashboards/identity/users/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/horizon/static/angular/login/login.js" afterPath="$PROJECT_DIR$/horizon/static/angular/login/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openstack_dashboard/dashboards/identity/users/tables.py" afterPath="$PROJECT_DIR$/openstack_dashboard/dashboards/identity/users/tables.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openstack_dashboard/urls.py" afterPath="$PROJECT_DIR$/openstack_dashboard/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/horizon/views.py" afterPath="$PROJECT_DIR$/horizon/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/horizon/forms/views.py" afterPath="$PROJECT_DIR$/horizon/forms/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openstack_dashboard/dashboards/identity/users/views.py" afterPath="$PROJECT_DIR$/openstack_dashboard/dashboards/identity/users/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="a3217776-d1a4-4043-910f-deb6f3e38686" name="Default" comment="" />
     <ignored path="horizon.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -798,12 +784,12 @@
       <workItem from="1447098439319" duration="1961000" />
       <workItem from="1447425733906" duration="1522000" />
       <workItem from="1448050544841" duration="17610000" />
-      <workItem from="1448391058296" duration="9320000" />
+      <workItem from="1448391058296" duration="9918000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115977000" />
+    <option name="totallyTimeSpent" value="116575000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="0" />
