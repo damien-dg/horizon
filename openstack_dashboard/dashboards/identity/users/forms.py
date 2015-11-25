@@ -42,7 +42,7 @@ PROJECT_REQUIRED = api.keystone.VERSIONS.active < 3
 
 class PasswordMixin(forms.SelfHandlingForm):
     password = forms.RegexField(
-        label=_("Name"),
+        label=_("Password"),
         widget=forms.PasswordInput(render_value=False),
         regex=validators.password_validator(),
         error_messages={'invalid': validators.password_validator_msg()})
