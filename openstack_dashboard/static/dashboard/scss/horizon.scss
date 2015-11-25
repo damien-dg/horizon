@@ -114,6 +114,7 @@ dt {
   width: 100%;
   h1 {
     margin: 0;
+    color: #365C69
   }
 }
 
@@ -128,15 +129,15 @@ h2 {
 }
 
 .sidebar {
-  background-color: $sidebar-background-color;
+  background-color: white;
   padding-top: 20px;
   margin-left: -$sidebar-width;
   left: $sidebar-width;
   width: $sidebar-width;
   position: absolute;
   z-index: 0;
-  -webkit-box-shadow:inset -3px 2px 6px -2px #C7C7C7, inset -1px 0 0 0 #cccccc;
-  box-shadow:inset -3px 2px 6px -2px #C7C7C7, inset -1px 0 0 0 #cccccc;
+  -webkit-box-shadow:inset -3px 2px 6px -2px white, inset -1px 0 0 0 white;
+  box-shadow:inset -3px 2px 6px -2px white, inset -1px 0 0 0 white;
 }
 
 .sidebar h4 {
@@ -318,7 +319,7 @@ a.current_item:hover h4 {
 }
 
 th {
-  background: #f1f1f1;
+  background: #F5EDF3;
 }
 td.anchor {
   padding: 0;
@@ -434,7 +435,7 @@ table form {
 
 .table tfoot tr td {
   border-top: 1px solid $table-border-color;
-  background-color: #f1f1f1;
+  background-color: #F5EDF3;
   font-size: 11px;
   line-height: 14px;
 }
@@ -492,7 +493,7 @@ td.success {
   background-color: #dff0d8 !important;
 }
 td.loading {
-  background-color: #e6e6e6 !important;
+  background-color: #cde4e4 !important;
 }
 
 .table_header .table_actions {
@@ -634,7 +635,7 @@ td.loading {
 
 form label {
     text-align: left;
-    color: $gray;
+    color: #365C69;
     font-weight: bold;
     display: inline-block;
 }
@@ -1312,7 +1313,7 @@ label.log-length {
 
   .form-control-feedback { top: 0; }
   .no_results {
-    border: 1px solid $table-border-color;
+    border: 1px solid #b2d1d3;
     padding: 9px 10px 8px 10px;
     opacity: 0.5;
   }

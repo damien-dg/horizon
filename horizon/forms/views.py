@@ -183,6 +183,8 @@ class ModalFormView(ModalBackdropMixin, ModalFormMixin, views.HorizonFormView):
                 return handled
             else:
                 success_url = self.get_success_url()
+                if success_url == "noredirect":
+                    return ""
                 response = http.HttpResponseRedirect(success_url)
                 # TODO(gabriel): This is not a long-term solution to how
                 # AJAX should be handled, but it's an expedient solution

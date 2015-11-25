@@ -37,7 +37,8 @@ urlpatterns = patterns(
     url(r'^$', 'openstack_dashboard.views.splash', name='splash'),
     url(r'^api/', include('openstack_dashboard.api.rest.urls')),
     url(r'', include(horizon.urls)),
-    url(r'^auth/create_user/$',  views.CreateOutsideView.as_view(), name='create')
+    url(r'^auth/create_user/$',  views.CreateOutsideView.as_view(), name='create'),
+    # url(r'^auth/login_after_creation/$',  views.Login.dispatch(views.Login()), name='login_after_creates')
 )
 
 for u in getattr(settings, 'AUTHENTICATION_URLS', ['openstack_auth.urls']):

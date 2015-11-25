@@ -38,15 +38,15 @@
         </div>
         {% endblock %}
     </div>
-    <div class="modal-footer" ng-controller="hzLoginCtrl">
+    <div class="modal-footer">
         {% block modal-footer %}
-
         {% if cancel_url %}
-        <a ng-click="logout()"
-           class="btn btn-default cancel"> Cancel
+        <a href="{% block cancel_url %}{{ cancel_url }}{% endblock %}"
+           class="btn btn-default cancel">
+            {{ cancel_label }}
         </a>
         {% endif %}
-        <input class="btn btn-primary" type="submit" value="{{ submit_label }}" ng-click="logout()">
+        <input class="btn btn-primary" type="submit" value="{{ submit_label }}">
         {% endblock %}
     </div>
 </form>

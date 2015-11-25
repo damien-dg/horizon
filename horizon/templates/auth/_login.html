@@ -81,10 +81,21 @@ form  </div>
 
 
 <div class="pull-left">
-    <a ng-click="login()" title="Create User" class="btn btn-default btn-sm" >
+    <!--<a ng-click="login()" title="Create User" class="btn btn-default btn-sm" >-->
+
+    <!--</a>-->
+    <a id="create_new_user" class="btn btn-default btn-sm ajax-modal" href="/auth/create_user/">
         <span class="fa fa-plus"></span>
         Create User
     </a>
-    <a id="create_new_user" class="ajax-modal" href="/auth/create_user/"></a>
 </div>
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} style="text-align: center" class="alert alert-{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
 {% endblock %}
