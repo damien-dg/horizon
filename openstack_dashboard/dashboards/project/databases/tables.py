@@ -171,7 +171,7 @@ class DeleteDatabase(tables.DeleteAction):
 
 class LaunchLink(tables.LinkAction):
     name = "launch"
-    verbose_name = _("Launch Instance")
+    verbose_name = _("Create Instance")
     url = "horizon:project:databases:launch"
     classes = ("ajax-modal", "btn-launch")
     icon = "cloud-upload"

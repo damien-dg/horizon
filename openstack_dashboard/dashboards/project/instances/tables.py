@@ -305,7 +305,7 @@ class ToggleSuspend(tables.BatchAction):
 
 class LaunchLink(tables.LinkAction):
     name = "launch"
-    verbose_name = _("Launch Instance")
+    verbose_name = _("Create Instance")
     url = "horizon:project:instances:launch"
     classes = ("ajax-modal", "btn-launch")
     icon = "cloud-upload"
@@ -333,7 +333,7 @@ class LaunchLink(tables.LinkAction):
                     self.verbose_name = string_concat(self.verbose_name, ' ',
                                                       _("(Quota exceeded)"))
             else:
-                self.verbose_name = _("Launch Instance")
+                self.verbose_name = _("Create Instance")
                 classes = [c for c in self.classes if c != "disabled"]
                 self.classes = classes
         except Exception:

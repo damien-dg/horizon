@@ -5,7 +5,7 @@
 
     "admin_api": [["is_admin:True"]],
 
-    "volume:create": [["not role:guest"],["role:admin"]],
+    "volume:create": [["not role:guest"],["role:admin"],["role:_member_"]],
     "volume:update": [],
     "volume:delete": [["rule:default"]],
     "volume:get_all": [],

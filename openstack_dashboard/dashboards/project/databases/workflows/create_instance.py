@@ -331,7 +331,7 @@ class Advanced(workflows.Step):
 
 class LaunchInstance(workflows.Workflow):
     slug = "launch_instance"
-    name = _("Launch Instance")
+    name = _("Create Instance")
     finalize_button_name = _("Launch")
     success_message = _('Launched %(count)s named "%(name)s".')
     failure_message = _('Unable to launch %(count)s named "%(name)s".')

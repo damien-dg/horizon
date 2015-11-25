@@ -11891,7 +11891,7 @@ msgid "Instance Boot Source"
 msgstr ""
 
 #: dashboards/project/instances/workflows/create_instance.py:96
-msgid "Choose Your Boot Source Type."
+msgid "Choose Your Operating System."
 msgstr ""
 
 #: dashboards/project/instances/workflows/create_instance.py:99
