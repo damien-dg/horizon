@@ -35,7 +35,17 @@
         </td>
     {% else %}
         <td{{ cell.attr_string|safe }}>
-            {% if cell.wrap_list %}<ul>{% endif %}{{ cell.value }}{% if cell.wrap_list %}</ul>{% endif %}
+            {% if cell.wrap_list %}<ul>{% endif %}
+            {%if cell.value = 'Active' %}
+            <font color="green"><b>
+            {{ cell.value }}</b></font>
+            {% elif cell.value = 'Error' %}
+            <font color="red"><b>
+            {{ cell.value }}</b></font>
+            {% else %}
+            {{ cell.value }}
+            {% endif %}
+            {% if cell.wrap_list %}</ul>{% endif %}
         </td>
     {% endif %}
 {% endif %}

@@ -15,6 +15,7 @@ from django.template.defaultfilters import floatformat  # noqa
 from django.template.defaultfilters import timesince  # noqa
 from django.utils.translation import ugettext_lazy as _
 
+from django.template.defaultfilters import title  # noqa
 from horizon import tables
 from horizon.templatetags import sizeformat
 from horizon.utils import filters
@@ -37,6 +38,7 @@ class BaseUsageTable(tables.DataTable):
                            verbose_name=_("RAM"),
                            filters=(sizeformat.mb_float_format,),
                            attrs={"data-type": "size"})
+    state = tables.Column('state', verbose_name=("Status"),filters=(title, filters.replace_underscores))
 
 
 class GlobalUsageTable(BaseUsageTable):
@@ -94,6 +96,6 @@ class ProjectUsageTable(BaseUsageTable):
         name = "project_usage"
         hidden_title = False
         verbose_name = _("Usage")
-        columns = ("instance", "vcpus", "disk", "memory", "uptime")
+        columns = ("instance", "state", "vcpus", "disk", "memory")
         table_actions = (CSVSummary,)
         multi_select = False

@@ -256,7 +256,7 @@ class GlobalUsage(BaseUsage):
 
 class ProjectUsage(BaseUsage):
     attrs = ('memory_mb', 'vcpus', 'uptime',
-             'hours', 'local_gb')
+             'hours', 'local_gb','status')
 
     def get_usage_list(self, start, end):
         show_terminated = self.request.GET.get('show_terminated',

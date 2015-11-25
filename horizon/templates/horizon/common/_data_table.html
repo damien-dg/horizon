@@ -53,6 +53,7 @@
     {% endfor %}
     </tbody>
   {% endblock table_body %}
+  <!--
   {% block table_footer %}
     {% if table.footer %}
     <tfoot>
@@ -66,10 +67,10 @@
           {% endif %}
         {% endfor %}
       </tr>
-      {% endif %}
+      {% endif %} 
       <tr>
         <td colspan="{{ table.get_columns|length }}">
-          <span class="table_count">{% blocktrans count counter=rows|length %}Displaying {{ counter }} item{% plural %}Displaying {{ counter }} items{% endblocktrans %}</span>
+          <span class="table_count">{% blocktrans count counter=rows|length %}Displaying {{ counter }} item{% plural %}Displaying {{ counter }} items{% endblocktrans %}</span> -->
           {% if table.has_prev_data or table.has_more_data %}
             <span class="spacer">|</span>
           {% endif %}

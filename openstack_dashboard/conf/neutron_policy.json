@@ -3,7 +3,7 @@
     "admin_or_owner": "rule:context_is_admin or project_id:%(project_id)s",
     "admin_or_network_owner": "rule:context_is_admin or project_id:%(network:project_id)s",
     "admin_only": "rule:context_is_admin",
-    "regular_user": "",
+    "regular_user": "not role:guest",
     "shared": "field:networks:shared=True",
     "shared_firewalls": "field:firewalls:shared=True",
     "external": "field:networks:router:external=True",
@@ -19,7 +19,7 @@
     "update_subnet": "rule:admin_or_network_owner",
     "delete_subnet": "rule:admin_or_network_owner",
 
-    "create_network": "",
+    "create_network": "not role:guest",
     "get_network": "rule:admin_or_owner or rule:shared or rule:external",
     "get_network:router:external": "rule:regular_user",
     "get_network:segments": "rule:admin_only",
@@ -39,8 +39,10 @@
     "update_network:provider:physical_network": "rule:admin_only",
     "update_network:provider:segmentation_id": "rule:admin_only",
     "delete_network": "rule:admin_or_owner",
+    
+    "create_security_group": "not role:guest",
 
-    "create_port": "",
+    "create_port": "not role:guest",
     "create_port:mac_address": "rule:admin_or_network_owner",
     "create_port:fixed_ips": "rule:admin_or_network_owner",
     "create_port:port_security_enabled": "rule:admin_or_network_owner",
@@ -64,7 +66,7 @@
     "create_router:external_gateway_info:enable_snat": "rule:admin_only",
     "update_router:external_gateway_info:enable_snat": "rule:admin_only",
 
-    "create_ikepolicy": "rule:admin_or_owner",
+    "create_ikepolicy": "not role:guest",
     "update_ikepolicy": "rule:admin_or_owner",
     "delete_ikepolicy": "rule:admin_or_owner",
 
@@ -80,14 +82,14 @@
     "update_ipsec_site_connection": "rule:admin_or_owner",
     "delete_ipsec_site_connection": "rule:admin_or_owner",
 
-    "create_firewall": "",
+    "create_firewall": "not role:guest",
     "get_firewall": "rule:admin_or_owner",
     "create_firewall:shared": "rule:admin_only",
     "get_firewall:shared": "rule:admin_only",
     "update_firewall": "rule:admin_or_owner",
     "delete_firewall": "rule:admin_or_owner",
 
-    "create_firewall_policy": "",
+    "create_firewall_policy": "not role:guest",
     "get_firewall_policy": "rule:admin_or_owner or rule:shared_firewalls",
     "create_firewall_policy:shared": "rule:admin_or_owner",
     "update_firewall_policy": "rule:admin_or_owner",

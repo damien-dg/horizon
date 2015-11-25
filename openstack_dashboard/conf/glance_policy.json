@@ -3,9 +3,9 @@
     "admin_or_owner":  "is_admin:True or project_id:%(project_id)s",
     "default": "rule:admin_or_owner",
 
-    "add_image": "",
+    "add_image": "rule:context_is_admin",
     "delete_image": "rule:admin_or_owner",
-    "get_image": "",
+    "get_image": "rule:context_is_admin",
     "get_images": "",
     "modify_image": "rule:admin_or_owner",
     "publicize_image": "",
