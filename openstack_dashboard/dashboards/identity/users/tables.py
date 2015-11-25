@@ -178,8 +178,10 @@ class UpgradeUsersAction(tables.Action):
 
     def single(self, table, request, obj_id):
         try:
-            api.keystone.add_tenant_user_role(request, user=obj_id, role="9fe2ff9ee4384b1894a90878d3e92bab", project="5fa3b387c9114beabd34a373e13a8b2a")
-            api.keystone.remove_tenant_user_role(request, user=obj_id, role="8b2a8e6f8db24a268b275c646903f263", project="5fa3b387c9114beabd34a373e13a8b2a")
+            response = api.keystone.user_get(request, obj_id, admin=True)
+            print response.project_id
+            api.keystone.add_tenant_user_role(request, user=obj_id, role="9fe2ff9ee4384b1894a90878d3e92bab", project=response.project_id)
+            api.keystone.remove_tenant_user_role(request, user=obj_id, role="8b2a8e6f8db24a268b275c646903f263", project=response.project_id)
             messages.success(request, "User has been upgraded!")
         except Exception:
             messages.error(request, "User has already been upgraded")

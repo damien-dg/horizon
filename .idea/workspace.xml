@@ -26,7 +26,27 @@
         <entry file="file://$PROJECT_DIR$/openstack_dashboard/dashboards/identity/users/create_user.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create_instance.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/openstack_dashboard/dashboards/project/instances/workflows/create_instance.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.42128602">
+              <caret line="95" column="49" selection-start-line="95" selection-start-column="49" selection-end-line="95" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/openstack_dashboard/dashboards/identity/users/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="119" column="30" selection-start-line="119" selection-start-column="30" selection-end-line="119" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -55,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tables.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tables.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/openstack_dashboard/dashboards/identity/users/tables.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48189417">
-              <caret line="182" column="28" selection-start-line="182" selection-start-column="28" selection-end-line="182" selection-end-column="28" />
+            <state vertical-scroll-proportion="-5.0">
+              <caret line="181" column="37" selection-start-line="181" selection-start-column="37" selection-end-line="181" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -105,16 +125,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/openstack_dashboard/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -149,7 +159,6 @@
         <option value="$PROJECT_DIR$/openstack_dashboard/conf/keystone_policy.json" />
         <option value="$PROJECT_DIR$/horizon/templates/_stylesheets.html" />
         <option value="$PROJECT_DIR$/openstack_dashboard/urls.py" />
-        <option value="$PROJECT_DIR$/openstack_dashboard/dashboards/identity/users/create_user.sh" />
         <option value="$PROJECT_DIR$/horizon/static/angular/login/login.js" />
         <option value="$PROJECT_DIR$/horizon/views.py" />
         <option value="$PROJECT_DIR$/.venv/lib/python2.7/site-packages/django/views/generic/edit.py" />
@@ -161,6 +170,7 @@
         <option value="$PROJECT_DIR$/openstack_dashboard/dashboards/identity/users/forms.py" />
         <option value="$PROJECT_DIR$/openstack_dashboard/dashboards/identity/users/upgrade_user.sh" />
         <option value="$PROJECT_DIR$/openstack_dashboard/dashboards/identity/users/tables.py" />
+        <option value="$PROJECT_DIR$/openstack_dashboard/dashboards/identity/users/create_user.sh" />
       </list>
     </option>
   </component>
@@ -309,7 +319,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="_creat&#9;FILE&#9;file:///home/damien/projects/horizon/horizon/templates/auth/_create_user.html&#10;_login&#9;FILE&#9;file:///home/damien/projects/horizon/horizon/templates/auth/_login.html&#10;get_success_url&#9;null&#9;null&#10;view&#9;FILE&#9;file:///home/damien/projects/horizon/openstack_dashboard/dashboards/identity/users/views.py&#10;messages&#9;FILE&#9;file:///home/damien/projects/horizon/horizon/messages.py&#10;settings&#9;FILE&#9;file:///home/damien/projects/horizon/openstack_dashboard/settings.py&#10;login&#9;FILE&#9;file:///home/damien/projects/horizon/horizon/static/angular/login/login.js&#10;authenticate&#9;null&#9;null&#10;create&#9;FILE&#9;file:///home/damien/projects/horizon/openstack_dashboard/dashboards/identity/users/create_user.sh&#10;forms&#9;FILE&#9;file:///home/damien/projects/horizon/openstack_dashboard/dashboards/identity/users/forms.py&#10;views.py&#9;FILE&#9;file:///home/damien/projects/horizon/openstack_dashboard/dashboards/identity/users/views.py&#10;neutron_poli&#9;FILE&#9;file:///home/damien/projects/horizon/openstack_dashboard/conf/neutron_policy.json&#10;urls&#9;FILE&#9;file:///home/damien/projects/horizon/openstack_dashboard/urls.py&#10;nova&#9;FILE&#9;file:///home/damien/projects/horizon/openstack_dashboard/conf/nova_policy.json&#10;createOutside&#9;null&#9;null&#10;views&#9;FILE&#9;file:///home/damien/projects/horizon/openstack_dashboard/views.py&#10;bootss&#9;FILE&#9;file:///home/damien/projects/horizon/.venv/lib/python2.7/site-packages/xstatic/pkg/bootstrap_scss/data/scss/bootstrap.scss&#10;bootstrap&#9;null&#9;null&#10;styl&#9;FILE&#9;file:///home/damien/projects/horizon/horizon/templates/_stylesheets.html&#10;stylesheets&#9;FILE&#9;file:///home/damien/projects/horizon/horizon/templates/_stylesheets.html&#10;base&#9;FILE&#9;file:///home/damien/projects/horizon/horizon/templates/base.html&#10;keysto&#9;FILE&#9;file:///home/damien/projects/horizon/openstack_dashboard/conf/keystone_policy.json&#10;modal_&#9;FILE&#9;file:///home/damien/projects/horizon/horizon/templates/horizon/common/_modal_form.html&#10;keystone.&#9;FILE&#9;file:///home/damien/projects/horizon/openstack_dashboard/api/keystone.py&#10;tables.p&#9;FILE&#9;file:///home/damien/projects/horizon/openstack_dashboard/dashboards/identity/projects/tables.py&#10;tables.py&#9;FILE&#9;file:///home/damien/projects/horizon/openstack_dashboard/dashboards/identity/users/tables.py&#10;policy.json&#9;FILE&#9;file:///home/damien/projects/horizon/openstack_dashboard/conf/keystone_policy.json&#10;data&#9;FILE&#9;file:///home/damien/projects/horizon/horizon/templates/horizon/common/_data_table_table_action.html&#10;table&#9;FILE&#9;file:///home/damien/projects/horizon/horizon/templates/horizon/common/_data_table_table_action.html&#10;create.&#9;FILE&#9;file:///home/damien/projects/horizon/horizon/templates/auth/_create.html&#10;create_&#9;FILE&#9;file:///home/damien/projects/horizon/horizon/templates/auth/create_user.html&#10;urls.&#9;FILE&#9;file:///home/damien/projects/horizon/openstack_dashboard/dashboards/identity/users/urls.py&#10;login.js&#9;FILE&#9;file:///home/damien/projects/horizon/horizon/static/angular/login/login.js&#10;_login.&#9;FILE&#9;file:///home/damien/projects/horizon/horizon/templates/auth/_login.html&#10;show lin&#9;null&#9;null&#10;requirements&#9;FILE&#9;file:///home/damien/projects/horizon/requirements.txt&#10;lxml&#9;FILE&#9;file:///home/damien/projects/horizon/.venv/local/lib/python2.7/site-packages/compressor/parser/lxml.py&#10;line &#9;ACTION&#9;EditorToggleShowLineNumbers&#10;line&#9;ACTION&#9;EditorToggleShowLineNumbers&#10;table_&#9;FILE&#9;file:///home/damien/projects/horizon/horizon/templates/horizon/common/_data_table_table_action.html&#10;index&#9;FILE&#9;file:///home/damien/projects/horizon/.venv/lib/python2.7/site-packages/coverage/htmlfiles/index.html&#10;_create&#9;FILE&#9;file:///home/damien/projects/horizon/openstack_dashboard/dashboards/admin/images/templates/images/_create.html&#10;user&#9;FILE&#9;file:///home/damien/projects/horizon/.venv/local/lib/python2.7/site-packages/keystoneclient/v2_0/users.py" />
+    <property name="SearchEverywhereHistoryKey" value="forms&#9;FILE&#9;file:///home/damien/projects/horizon/openstack_dashboard/dashboards/identity/users/forms.py&#10;_creat&#9;FILE&#9;file:///home/damien/projects/horizon/horizon/templates/auth/_create_user.html&#10;_login&#9;FILE&#9;file:///home/damien/projects/horizon/horizon/templates/auth/_login.html&#10;get_success_url&#9;null&#9;null&#10;view&#9;FILE&#9;file:///home/damien/projects/horizon/openstack_dashboard/dashboards/identity/users/views.py&#10;messages&#9;FILE&#9;file:///home/damien/projects/horizon/horizon/messages.py&#10;settings&#9;FILE&#9;file:///home/damien/projects/horizon/openstack_dashboard/settings.py&#10;login&#9;FILE&#9;file:///home/damien/projects/horizon/horizon/static/angular/login/login.js&#10;authenticate&#9;null&#9;null&#10;create&#9;FILE&#9;file:///home/damien/projects/horizon/openstack_dashboard/dashboards/identity/users/create_user.sh&#10;views.py&#9;FILE&#9;file:///home/damien/projects/horizon/openstack_dashboard/dashboards/identity/users/views.py&#10;neutron_poli&#9;FILE&#9;file:///home/damien/projects/horizon/openstack_dashboard/conf/neutron_policy.json&#10;urls&#9;FILE&#9;file:///home/damien/projects/horizon/openstack_dashboard/urls.py&#10;nova&#9;FILE&#9;file:///home/damien/projects/horizon/openstack_dashboard/conf/nova_policy.json&#10;createOutside&#9;null&#9;null&#10;views&#9;FILE&#9;file:///home/damien/projects/horizon/openstack_dashboard/views.py&#10;bootss&#9;FILE&#9;file:///home/damien/projects/horizon/.venv/lib/python2.7/site-packages/xstatic/pkg/bootstrap_scss/data/scss/bootstrap.scss&#10;bootstrap&#9;null&#9;null&#10;styl&#9;FILE&#9;file:///home/damien/projects/horizon/horizon/templates/_stylesheets.html&#10;stylesheets&#9;FILE&#9;file:///home/damien/projects/horizon/horizon/templates/_stylesheets.html&#10;base&#9;FILE&#9;file:///home/damien/projects/horizon/horizon/templates/base.html&#10;keysto&#9;FILE&#9;file:///home/damien/projects/horizon/openstack_dashboard/conf/keystone_policy.json&#10;modal_&#9;FILE&#9;file:///home/damien/projects/horizon/horizon/templates/horizon/common/_modal_form.html&#10;keystone.&#9;FILE&#9;file:///home/damien/projects/horizon/openstack_dashboard/api/keystone.py&#10;tables.p&#9;FILE&#9;file:///home/damien/projects/horizon/openstack_dashboard/dashboards/identity/projects/tables.py&#10;tables.py&#9;FILE&#9;file:///home/damien/projects/horizon/openstack_dashboard/dashboards/identity/users/tables.py&#10;policy.json&#9;FILE&#9;file:///home/damien/projects/horizon/openstack_dashboard/conf/keystone_policy.json&#10;data&#9;FILE&#9;file:///home/damien/projects/horizon/horizon/templates/horizon/common/_data_table_table_action.html&#10;table&#9;FILE&#9;file:///home/damien/projects/horizon/horizon/templates/horizon/common/_data_table_table_action.html&#10;create.&#9;FILE&#9;file:///home/damien/projects/horizon/horizon/templates/auth/_create.html&#10;create_&#9;FILE&#9;file:///home/damien/projects/horizon/horizon/templates/auth/create_user.html&#10;urls.&#9;FILE&#9;file:///home/damien/projects/horizon/openstack_dashboard/dashboards/identity/users/urls.py&#10;login.js&#9;FILE&#9;file:///home/damien/projects/horizon/horizon/static/angular/login/login.js&#10;_login.&#9;FILE&#9;file:///home/damien/projects/horizon/horizon/templates/auth/_login.html&#10;show lin&#9;null&#9;null&#10;requirements&#9;FILE&#9;file:///home/damien/projects/horizon/requirements.txt&#10;lxml&#9;FILE&#9;file:///home/damien/projects/horizon/.venv/local/lib/python2.7/site-packages/compressor/parser/lxml.py&#10;line &#9;ACTION&#9;EditorToggleShowLineNumbers&#10;line&#9;ACTION&#9;EditorToggleShowLineNumbers&#10;table_&#9;FILE&#9;file:///home/damien/projects/horizon/horizon/templates/horizon/common/_data_table_table_action.html&#10;index&#9;FILE&#9;file:///home/damien/projects/horizon/.venv/lib/python2.7/site-packages/coverage/htmlfiles/index.html&#10;_create&#9;FILE&#9;file:///home/damien/projects/horizon/openstack_dashboard/dashboards/admin/images/templates/images/_create.html&#10;user&#9;FILE&#9;file:///home/damien/projects/horizon/.venv/local/lib/python2.7/site-packages/keystoneclient/v2_0/users.py" />
     <property name="FullScreen" value="false" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -784,16 +794,16 @@
       <workItem from="1447098439319" duration="1961000" />
       <workItem from="1447425733906" duration="1522000" />
       <workItem from="1448050544841" duration="17610000" />
-      <workItem from="1448391058296" duration="9918000" />
+      <workItem from="1448391058296" duration="14168000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116575000" />
+    <option name="totallyTimeSpent" value="120825000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -804,13 +814,13 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16972111" sideWeight="0.48333332" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16972111" sideWeight="0.48440748" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32258064" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22419354" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16972111" sideWeight="0.51666665" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16972111" sideWeight="0.5155925" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -886,13 +896,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/openstack_dashboard/api/rest/keystone.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="227" column="0" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.venv/lib/python2.7/site-packages/django/contrib/auth/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1173,27 +1176,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/openstack_dashboard/dashboards/identity/users/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.064516">
-          <caret line="119" column="30" selection-start-line="119" selection-start-column="30" selection-end-line="119" selection-end-column="30" />
-          <folding>
-            <element signature="e#764#782#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/horizon/templates/auth/_create_user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.333333">
-          <caret line="20" column="103" selection-start-line="20" selection-start-column="103" selection-end-line="20" selection-end-column="103" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/openstack_dashboard/dashboards/identity/users/upgrade_user.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1206,14 +1188,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.1101243">
           <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/openstack_dashboard/dashboards/identity/users/create_user.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1242,14 +1216,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/openstack_dashboard/dashboards/identity/users/check_user_exists.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="6" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/openstack_dashboard/dashboards/identity/domains/tables.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1266,10 +1232,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/horizon/templates/auth/_create_user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.333333">
+          <caret line="20" column="103" selection-start-line="20" selection-start-column="103" selection-end-line="20" selection-end-column="103" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/openstack_dashboard/dashboards/identity/users/tables.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48189417">
-          <caret line="182" column="28" selection-start-line="182" selection-start-column="28" selection-end-line="182" selection-end-column="28" />
+        <state vertical-scroll-proportion="-5.0">
+          <caret line="181" column="37" selection-start-line="181" selection-start-column="37" selection-end-line="181" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/openstack_dashboard/dashboards/identity/users/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="119" column="30" selection-start-line="119" selection-start-column="30" selection-end-line="119" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/openstack_dashboard/dashboards/identity/users/check_user_exists.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="6" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/openstack_dashboard/dashboards/identity/users/create_user.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/openstack_dashboard/dashboards/project/instances/workflows/create_instance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42128602">
+          <caret line="95" column="49" selection-start-line="95" selection-start-column="49" selection-end-line="95" selection-end-column="49" />
           <folding />
         </state>
       </provider>
